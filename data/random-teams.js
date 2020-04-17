@@ -715,7 +715,7 @@ class RandomTeams {
 					if (counter.Physical + counter.Special < 3 || hasMove['rapidspin']) rejected = true;
 					break;
 				case 'tailwind':
-					if (!counter.setupType) rejected = true;
+					if (counter.setupType) rejected = true;
 					break;
 				case 'zenheadbutt':
 					if (movePool.includes('bellydrum') || movePool.includes('highjumpkick') || hasMove['bellydrum'] && hasMove['substitute']) rejected = true;
