@@ -1142,6 +1142,8 @@ class RandomTeams {
 					rejectAbility = (!hasMove['raindance'] && (hasAbility['Intimidate'] || hasAbility['Slush Rush'] || hasAbility['Water Absorb']));
 				} else if (ability === 'Technician') {
 					rejectAbility = (!counter['technician'] || hasMove['tailslap'] || (hasAbility['Punk Rock'] && isDoubles));
+				} else if (ability === 'Telepathy') {
+					rejectAbility = (!isDoubles && !hasAbility['Pressure'])
 				} else if (ability === 'Tinted Lens') {
 					rejectAbility = (hasMove['defog'] || hasMove['hurricane'] || counter.Status > 2 && !counter.setupType);
 				} else if (ability === 'Unaware') {
