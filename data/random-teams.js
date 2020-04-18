@@ -761,7 +761,7 @@ class RandomTeams {
 					if (!!counter['speedsetup'] || counter.damagingMoves.length < 2) rejected = true;
 					break;
 				case 'closecombat': case 'flashcannon':
-					if (hasMove['substitute'] || hasMove['toxic'] && movePool.includes('substitute') || ((movePool.includes('drainpunch') || hasAbility['No Guard']) && isDoubles)) rejected = true;
+					if (hasMove['substitute'] || hasMove['toxic'] && movePool.includes('substitute')) rejected = true;
 					break;
 				case 'circlethrow': case 'dragontail':
 					if (!!counter['speedsetup'] || hasMove['encore'] || !(hasMove['rest'] && hasMove['sleeptalk'])) rejected = true;
@@ -864,11 +864,11 @@ class RandomTeams {
 				case 'icywind':
 					if (hasMove['freezedry'] || hasMove['icebeam'] || counter.setupType) rejected = true;
 					break;
-				case 'drainpunch':
-					if (movePool.includes('closecombat') && isDoubles) rejected = true;
-					break;
 				case 'bodypress':
 					if (hasMove['mirrorcoat'] || hasMove['shellsmash'] || hasMove['earthquake'] && movePool.includes('shellsmash')) rejected = true;
+					break;
+				case 'drainpunch':
+					if (movePool.includes('closecombat') && isDoubles) rejected = true;
 					break;
 				case 'dynamicpunch':
 					if (hasMove['closecombat'] || hasMove['facade']) rejected = true;
@@ -1078,8 +1078,6 @@ class RandomTeams {
 					rejectAbility = !counter['inaccurate'];
 				} else if (ability === 'Cursed Body') {
 					rejectAbility = hasAbility['Infiltrator'];
-				} else if (ability === 'Speed Boost') {
-					rejectAbility = (!isDoubles && hasAbility['Infiltrator']);
 				} else if (ability === 'Defiant' || ability === 'Moxie') {
 					rejectAbility = (!counter['Physical'] || hasMove['dragontail']);
 				} else if (ability === 'Flash Fire') {
@@ -1099,7 +1097,7 @@ class RandomTeams {
 				} else if (ability === 'Limber') {
 					rejectAbility = species.types.includes('Electric');
 				} else if (ability === 'Magic Guard') {
-					rejectAbility = (!isDoubles && abilities.includes('Tinted Lens') && !counter.Status);
+					rejectAbility = (!isDoubles && hasAbility['Tinted Lens'] && !counter.Status);
 				} else if (ability === 'Mold Breaker') {
 					rejectAbility = (hasAbility['Adaptability'] || hasAbility['Scrappy'] || hasAbility['Unburden'] && counter.setupType);
 				} else if (ability === 'Moody') {
@@ -1130,6 +1128,8 @@ class RandomTeams {
 					rejectAbility = counter['Water'] > 1;
 				} else if (ability === 'Snow Warning') {
 					rejectAbility = (hasAbility['Refrigerate'] && !!counter['Normal']);
+				} else if (ability === 'Speed Boost') {
+					rejectAbility = (!isDoubles && hasAbility['Infiltrator']);
 				} else if (ability === 'Sturdy') {
 					rejectAbility = !!counter['recoil'];
 				} else if (ability === 'Swarm') {
