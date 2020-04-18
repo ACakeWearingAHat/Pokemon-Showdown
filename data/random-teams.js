@@ -1174,7 +1174,7 @@ class RandomTeams {
 				if (hasAbility['Intimidate']) ability = 'Intimidate';
 				if (hasAbility['Ripen']) ability = 'Ripen';
 				if (hasAbility['Stalwart']) ability = 'Stalwart';
-				if (hasAbility['Telepathy'] && (hasAbility['Pressure']) ability = 'Telepathy';
+				if (hasAbility['Telepathy'] && hasAbility['Pressure']) ability = 'Telepathy';
 			}
 			
 		} else {
