@@ -1898,7 +1898,7 @@ let BattleFormatsData = {
 	},
 	wailord: {
 		randomBattleMoves: ["hydropump", "hypervoice", "icebeam", "waterspout"],
-		randomDoubleBattleMoves: ["hydropump", "icebeam", "protect", "surf", "waterspout"],
+		randomDoubleBattleMoves: ["hydropump", "icebeam", "surf", "waterspout"],
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
