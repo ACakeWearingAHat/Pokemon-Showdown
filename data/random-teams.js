@@ -1110,7 +1110,7 @@ class RandomTeams {
 					rejectAbility = true;
 				} else if (ability === 'Prankster' || ability === 'Steely Spirit') {
 					rejectAbility = !counter['Status'];
-				} else if (ability === 'Pressure' && ability === 'Synchronize') {
+				} else if (ability === 'Pressure' || ability === 'Synchronize') {
 					rejectAbility = ((isDoubles && ability === 'Pressure') || counter.setupType || counter.Status < 2);
 				} else if (ability === 'Refrigerate') {
 					rejectAbility = !counter['Normal'];
