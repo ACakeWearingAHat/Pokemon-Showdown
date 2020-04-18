@@ -1237,6 +1237,8 @@ class RandomTeams {
 			item = 'Liechi Berry';
 		} else if (hasMove['blizzard'] && isDoubles && !teamDetails['hail']) {
 			item = 'Blunder Policy';
+		} else if ((hasMove['waterspout'] || hasMove['Eruption']) && isDoubles && counter.damagingMoves.length >= 4) {
+			item = 'Choice Scarf';
 
 		// Medium priority
 		} else if (counter.Physical >= 4 && ability !== 'Guts' && (!hasMove['bodyslam'] || hasType['Normal']) && !hasMove['fakeout'] && !hasMove['flamecharge'] && !hasMove['rapidspin'] && !isDoubles) {
@@ -1253,7 +1255,7 @@ class RandomTeams {
 			item = 'Life Orb';
 		} else if (hasMove['outrage'] && counter.setupType) {
 			item = 'Lum Berry';
-		} else if (isDoubles && counter.damagingMoves.length >= 4 && species.baseStats.spe >= 60 && !hasMove['eruption'] && !hasMove['fakeout'] && !hasMove['suckerpunch'] && !hasMove['waterspout'] && ability !== 'Sturdy') {
+		} else if (isDoubles && counter.damagingMoves.length >= 4 && species.baseStats.spe >= 60 && !hasMove['fakeout'] && !hasMove['suckerpunch'] && ability !== 'Sturdy') {
 			item = 'Life Orb';
 		} else if (isDoubles && this.dex.getEffectiveness('Ice', species) >= 2) {
 			item = 'Yache Berry';
