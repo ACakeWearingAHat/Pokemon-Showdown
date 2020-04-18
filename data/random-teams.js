@@ -887,11 +887,13 @@ class RandomTeams {
 					if (hasMove['morningsun']) rejected = true;
 					break;
 				case 'psychic':
-					if (hasMove['psyshock'] && (isDoubles || counter.setupType)) rejected = true;
+					if (hasMove['psyshock'] && counter.setupType) rejected = true;
+					if (movePool.includes('psyshock') && isDoubles) rejected = true;
 					break;
 				case 'psyshock':
-					if ((hasMove['psychic'] || hasAbility['Pixilate']) && (isDoubles || (counter.Special < 4 && !counter.setupType))) rejected = true;
+					if ((hasMove['psychic'] || hasAbility['Pixilate']) && counter.Special < 4 && !counter.setupType) rejected = true;
 					if (hasAbility['Multiscale'] && !counter.setupType) rejected = true;
+					if (movePool.includes('psychic') && isDoubles) rejected = true;
 					break;
 				case 'bugbuzz':
 					if (hasMove['uturn'] && !counter.setupType) rejected = true;
