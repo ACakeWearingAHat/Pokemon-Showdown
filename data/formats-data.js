@@ -478,7 +478,7 @@ let BattleFormatsData = {
 	},
 	machamp: {
 		randomBattleMoves: ["bulletpunch", "closecombat", "dynamicpunch", "facade", "knockoff", "stoneedge"],
-		randomDoubleBattleMoves: ["bulletpunch", "closecombat", "facade", "knockoff", "poisonjab", "protect", "stoneedge"],
+		randomDoubleBattleMoves: ["bulletpunch", "closecombat", "facade", "knockoff", "poisonjab", "protect"],
 		tier: "UU",
 		doublesTier: "DUU",
 	},
