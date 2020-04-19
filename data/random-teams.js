@@ -1079,7 +1079,7 @@ class RandomTeams {
 				} else if (ability === 'Competitive') {
 					rejectAbility = (counter['Special'] < 2 || hasMove['rest'] && hasMove['sleeptalk']);
 				} else if (ability === 'Compound Eyes' || ability === 'No Guard') {
-					rejectAbility = !counter['inaccurate']; || (ability === 'No Guard' && isDoubles && species.types.includes('Rock'))
+					rejectAbility = (!counter['inaccurate']; || (ability === 'No Guard' && isDoubles && species.types.includes('Rock')));
 				} else if (ability === 'Cursed Body') {
 					rejectAbility = hasAbility['Infiltrator'];
 				} else if (ability === 'Defiant' || ability === 'Moxie') {
