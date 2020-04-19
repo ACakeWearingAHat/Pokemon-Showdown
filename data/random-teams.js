@@ -695,7 +695,7 @@ class RandomTeams {
 				case 'protect':
 					if (movePool.includes('leechseed') || movePool.includes('toxic') && !hasMove['wish']) rejected = true;
 					if (counter.Status < 2 && !isDoubles) rejected = true;
-					if (isDoubles && counter.status > 2 && !hasAbility['Moody'] && !hasMove['wish'] && !hasMove['seismictoss']) rejected = true;
+					if (isDoubles && counter.damagingMoves.length <=1 && !hasAbility['Moody'] && !hasMove['wish'] && !hasMove['seismictoss']) rejected = true;
 					if (movePool.includes('fakeout') && isDoubles) rejected = true;
 					break;
 				case 'rest':
