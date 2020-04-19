@@ -3339,7 +3339,7 @@ let BattleFormatsData = {
 	},
 	braviary: {
 		randomBattleMoves: ["bravebird", "bulkup", "closecombat", "facade", "roost", "uturn"],
-		randomDoubleBattleMoves: ["bravebird", "closecombat", "protect", "roost", "tailwind", "uturn"],
+		randomDoubleBattleMoves: ["bravebird", "closecombat", "protect", "roost", "tailwind"],
 		tier: "UU",
 		doublesTier: "DUU",
 	},
