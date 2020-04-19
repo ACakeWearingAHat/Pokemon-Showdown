@@ -326,7 +326,7 @@ let BattleFormatsData = {
 	},
 	crobat: {
 		randomBattleMoves: ["bravebird", "defog", "roost", "superfang", "taunt", "toxic", "uturn"],
-		randomDoubleBattleMoves: ["bravebird", "defog", "roost", "superfang", "tailwind", "taunt", "uturn"],
+		randomDoubleBattleMoves: ["bravebird", "defog", "roost", "superfang", "tailwind", "taunt"],
 		isNonstandard: "Past",
 		tier: "Illegal",
 	},
@@ -338,13 +338,13 @@ let BattleFormatsData = {
 	},
 	vileplume: {
 		randomBattleMoves: ["aromatherapy", "gigadrain", "sleeppowder", "sludgebomb", "strengthsap"],
-		randomDoubleBattleMoves: ["aromatherapy", "gigadrain", "protect", "sleeppowder", "sludgebomb", "strengthsap"],
+		randomDoubleBattleMoves: ["aromatherapy", "gigadrain", "pollenpuff", "sleeppowder", "sludgebomb", "strengthsap"],
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	bellossom: {
 		randomBattleMoves: ["gigadrain", "moonblast", "quiverdance", "sleeppowder", "strengthsap"],
-		randomDoubleBattleMoves: ["gigadrain", "leechseed", "moonblast", "protect", "quiverdance", "sleeppowder"],
+		randomDoubleBattleMoves: ["gigadrain", "moonblast", "quiverdance", "sleeppowder", "strengthsap"],
 		tier: "PU",
 		doublesTier: "(DUU)",
 	},
@@ -410,7 +410,7 @@ let BattleFormatsData = {
 	},
 	perrserker: {
 		randomBattleMoves: ["closecombat", "crunch", "fakeout", "ironhead", "swordsdance", "uturn"],
-		randomDoubleBattleMoves: ["closecombat", "crunch", "fakeout", "ironhead", "seedbomb", "uturn"],
+		randomDoubleBattleMoves: ["closecombat", "crunch", "fakeout", "ironhead", "seedbomb", "swordsdance", "uturn"],
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
@@ -869,7 +869,7 @@ let BattleFormatsData = {
 	},
 	mrrime: {
 		randomBattleMoves: ["focusblast", "freezedry", "psychic", "rapidspin", "slackoff", "trick"],
-		randomDoubleBattleMoves: ["fakeout", "freezedry", "icywind", "protect", "psychic", "psyshock", "rapidspin"],
+		randomDoubleBattleMoves: ["fakeout", "focusblast", "freezedry", "icywind", "protect", "psychic", "psyshock", "rapidspin"],
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
@@ -1190,7 +1190,7 @@ let BattleFormatsData = {
 	},
 	lanturn: {
 		randomBattleMoves: ["healbell", "icebeam", "scald", "thunderbolt", "toxic", "voltswitch"],
-		randomDoubleBattleMoves: ["icebeam", "protect", "scald", "thunderbolt", "thunderwave", "voltswitch"],
+		randomDoubleBattleMoves: ["healbell", "icebeam", "protect", "scald", "thunderbolt", "thunderwave"],
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
@@ -1740,7 +1740,7 @@ let BattleFormatsData = {
 	},
 	ninjask: {
 		randomBattleMoves: ["acrobatics", "leechlife", "nightslash", "swordsdance"],
-		randomDoubleBattleMoves: ["acrobatics", "batonpass", "leechlife", "protect", "substitute", "swordsdance"],
+		randomDoubleBattleMoves: ["acrobatics", "defog", "leechlife", "protect", "swordsdance"],
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
@@ -1870,7 +1870,7 @@ let BattleFormatsData = {
 	},
 	roserade: {
 		randomBattleMoves: ["leafstorm", "sleeppowder", "sludgebomb", "spikes", "synthesis", "toxicspikes"],
-		randomDoubleBattleMoves: ["energyball", "leafstorm", "protect", "sleeppowder", "sludgebomb", "synthesis"],
+		randomDoubleBattleMoves: ["gigadrain", "leafstorm", "protect", "sleeppowder", "sludgebomb"],
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
@@ -1898,7 +1898,7 @@ let BattleFormatsData = {
 	},
 	wailord: {
 		randomBattleMoves: ["hydropump", "hypervoice", "icebeam", "waterspout"],
-		randomDoubleBattleMoves: ["hydropump", "icebeam", "surf", "waterspout"],
+		randomDoubleBattleMoves: ["hydropump", "icebeam", "earthquake", "waterspout"],
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
@@ -2067,6 +2067,7 @@ let BattleFormatsData = {
 		tier: "LC",
 	},
 	dusclops: {
+		randomDoubleBattleMoves: ["allyswitch", "haze", "helpinghand", "nightshade", "painsplit", "trickroom", "willowisp"],
 		tier: "NFE",
 		doublesTier: "DOU",
 	},
@@ -2403,12 +2404,13 @@ let BattleFormatsData = {
 	},
 	cherrim: {
 		randomBattleMoves: ["dazzlinggleam", "energyball", "healingwish", "leechseed", "substitute"],
-		randomDoubleBattleMoves: ["helpinghand", "playrough", "protect", "solarblade", "sunnyday", "weatherball"],
+		randomDoubleBattleMoves: ["aromatherapy", "energyball", "helpinghand", "pollenpuff", "protect"],
 		tier: "(PU)",
 		doublesTier: "(DUU)",
 	},
 	cherrimsunshine: {
 		randomBattleMoves: ["playrough", "solarblade", "sunnyday", "weatherball"],
+		randomDoubleBattleMoves: ["playrough", "solarblade", "sunnyday", "weatherball"],
 	},
 	shellos: {
 		tier: "LC",
@@ -3160,7 +3162,7 @@ let BattleFormatsData = {
 	},
 	escavalier: {
 		randomBattleMoves: ["closecombat", "drillrun", "ironhead", "knockoff", "megahorn", "swordsdance"],
-		randomDoubleBattleMoves: ["closecombat", "drillrun", "ironhead", "knockoff", "megahorn", "protect"],
+		randomDoubleBattleMoves: ["closecombat", "drillrun", "ironhead", "knockoff", "megahorn", "protect", "swordsdance"],
 		tier: "RU",
 		doublesTier: "DUU",
 	},
@@ -3398,7 +3400,7 @@ let BattleFormatsData = {
 	},
 	virizion: {
 		randomBattleMoves: ["closecombat", "leafblade", "stoneedge", "swordsdance", "taunt"],
-		randomDoubleBattleMoves: ["closecombat", "leafblade", "stoneedge", "substitute", "swordsdance", "synthesis", "taunt"],
+		randomDoubleBattleMoves: ["closecombat", "leafblade", "stoneedge", "substitute", "swordsdance", "taunt"],
 		tier: "RU",
 		doublesTier: "(DUU)",
 	},
@@ -3734,7 +3736,7 @@ let BattleFormatsData = {
 	},
 	hawlucha: {
 		randomBattleMoves: ["bravebird", "closecombat", "roost", "stoneedge", "swordsdance", "throatchop"],
-		randomDoubleBattleMoves: ["bravebird", "closecombat", "protect", "substitute", "swordsdance", "tailwind"],
+		randomDoubleBattleMoves: ["bravebird", "closecombat", "protect", "stoneedge", "swordsdance", "throatchop"],
 		tier: "OU",
 		doublesTier: "DUU",
 	},
@@ -4100,7 +4102,7 @@ let BattleFormatsData = {
 	},
 	tsareena: {
 		randomBattleMoves: ["highjumpkick", "knockoff", "playrough", "powerwhip", "rapidspin", "synthesis", "uturn"],
-		randomDoubleBattleMoves: ["highjumpkick", "knockoff", "powerwhip", "rapidspin", "synthesis", "uturn"],
+		randomDoubleBattleMoves: ["highjumpkick", "knockoff", "playrough", "powerwhip", "rapidspin", "uturn"],
 		tier: "UU",
 		doublesTier: "(DUU)",
 	},
@@ -4565,7 +4567,7 @@ let BattleFormatsData = {
 	},
 	thievul: {
 		randomBattleMoves: ["darkpulse", "foulplay", "grassknot", "nastyplot", "partingshot", "psychic"],
-		randomDoubleBattleMoves: ["faketears", "foulplay", "partingshot", "quickguard", "snarl", "taunt"],
+		randomDoubleBattleMoves: ["faketears", "foulplay", "partingshot", "snarl", "taunt"],
 		unreleasedHidden: true,
 		tier: "PU",
 		doublesTier: "(DUU)",
