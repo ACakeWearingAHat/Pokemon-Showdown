@@ -1212,7 +1212,7 @@ class RandomTeams {
 			item = this.sample(['Aguav', 'Figy', 'Iapapa', 'Mago', 'Wiki']) + ' Berry';
 		} else if (ability === 'Gorilla Tactics' || ability === 'Imposter' || (ability === 'Magnet Pull' && hasMove['bodypress'] && !isDoubles)) {
 			item = 'Choice Scarf';
-		} else if (hasMove['switcheroo'] || hasMove['trick'] || (isDoubles && (hasMove['uturn'] || hasMove['voltswitch']) && counter.status >=1)) {
+		} else if (hasMove['switcheroo'] || hasMove['trick'] || (isDoubles && (hasMove['uturn'] || hasMove['voltswitch']) && !counter.status >= 1)) {
 			if (species.baseStats.spe >= 60 && species.baseStats.spe <= 108 && !counter['priority']) {
 				item = 'Choice Scarf';
 			} else {
