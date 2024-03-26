@@ -171,10 +171,8 @@ function getData(species: string | Species, format: string | Format): any | null
 	const dex = Dex.forFormat(format);
 	format = Dex.formats.get(format);
 	species = dex.species.get(species);
-	// Gen 7 Random Doubles has a separate file to Gen 7 singles but still uses the old system.
-	const isGen7Doubles = format.gameType === 'doubles' && dex.gen === 7;
 	const dataFile = JSON.parse(
-		FS(`data/mods/${dex.currentMod}/random-${isGen7Doubles ? 'doubles-' : ''}data.json`).readIfExistsSync() || '{}'
+		FS(`data/mods/${dex.currentMod}/random-data.json`).readIfExistsSync() || '{}'
 	);
 	const data = dataFile[species.id];
 	if (!data) return null;
@@ -1036,15 +1034,13 @@ export const commands: Chat.ChatCommands = {
 		}
 
 		let setExists: boolean;
-		if ([3, 4, 5, 6, 9].includes(dex.gen) || dex.gen === 7 && format.gameType !== 'doubles') {
+		if ([3, 4, 5, 6, 7, 9].includes(dex.gen)) {
 			setExists = !!getSets(species, format);
-		} else if (dex.gen === 7 && format.gameType === 'doubles') {
-			setExists = !!getData(species, format);
 		} else {
 			const data = getData(species, format);
 			if (!data) {
 				setExists = false;
-			} else if ((format.gameType === 'doubles' && dex.gen !== 7) || format.gameType === 'freeforall') {
+			} else if ((format.gameType === 'doubles') || format.gameType === 'freeforall') {
 				setExists = !!data.doublesMoves;
 			} else {
 				setExists = !!data.moves;
