@@ -26,7 +26,7 @@ const MOVE_PAIRS = [
 ];
 
 export class RandomGen2Teams extends RandomGen3Teams {
-	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./sets.json');
+	randomSets: {[species: IDEntry]: RandomTeamsTypes.RandomSpeciesData} = require('./sets.json');
 
 	constructor(format: string | Format, prng: PRNG | PRNGSeed | null) {
 		super(format, prng);
@@ -140,7 +140,7 @@ export class RandomGen2Teams extends RandomGen3Teams {
 	// Generate random moveset for a given species, role, preferred type.
 	randomMoveset(
 		types: string[],
-		abilities: Set<string>,
+		abilities: string[],
 		teamDetails: RandomTeamsTypes.TeamDetails,
 		species: Species,
 		isLead: boolean,
@@ -402,7 +402,7 @@ export class RandomGen2Teams extends RandomGen3Teams {
 		const ivs = {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30};
 
 		const types = species.types;
-		const abilities = new Set(Object.values(species.abilities));
+		const abilities: string[] = [];
 
 		// Get moves
 		const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, movePool,
