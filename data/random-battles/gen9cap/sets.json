@@ -593,19 +593,19 @@
                 "role": "Bulky Support",
                 "movepool": ["Glare", "Ice Beam", "Milk Drink", "Thunderbolt"],
                 "abilities": ["Electromorphosis"],
-                "teraTypes": ["Ghost", "Fairy", "Grass"]
+                "teraTypes": ["Fairy", "Ghost", "Grass"]
             },
             {
                 "role": "Fast Support",
                 "movepool": ["Discharge", "Ice Beam", "Milk Drink", "Volt Switch"],
                 "abilities": ["Electromorphosis", "Sticky Hold"],
-                "teraTypes": ["Ghost", "Flying"]
+                "teraTypes": ["Flying", "Ghost"]
             },
             {
                 "role": "Bulky Attacker",
                 "movepool": ["Discharge", "Ice Beam", "Knock Off", "Milk Drink", "Thunderbolt"],
                 "abilities": ["Electromorphosis"],
-                "teraTypes": ["Ghost", "Fairy", "Grass"]
+                "teraTypes": ["Fairy", "Ghost", "Grass"]
             }
         ]
     }
